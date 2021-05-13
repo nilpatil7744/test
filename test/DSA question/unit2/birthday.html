@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+    #nil1 {
+        /* margin-left: 30%; */
+        margin-top: 10px; 
+    }
+    #buttn {
+       text-align: center;
+       padding: 10px;
+    }
+    #nilo11 {
+        padding: 10px;
+        width: 100px;
+        background: black;
+        color: whitesmoke;
+        border: 1px solid white;
+
+    </style>
+
+</head>
+
+<body>
+
+
+  <div id="buttn">
+    <button onclick="vedansh()" id="nilo11">Vedansh</button>
+
+
+    <button onclick="anant()" id="nilo11">Anant</button>
+
+
+    <button onclick="nrupul()" id="nilo11">Nrupul</button>
+
+    <button onclick="yogesh()" id="nilo11">Yogesh</button>
+  </div>
+
+
+    <div id="nil1">
+        <img src="" id="congrts">
+    </div>
+
+
+    <script>
+
+
+        var h = ["https://contenthub-static.grammarly.com/blog/wp-content/uploads/2019/04/thumbnail-7075f02d50b2e1b87acaac02e0592003.jpeg", "https://en.ryte.com/magazine/wp-content/uploads/2017/10/1500x800-404EInstellungen-1.png"]
+
+        function vedansh() {
+            var mypromise = new Promise(function (resolve, reject) {
+
+                var age = 20;
+
+                if (age > 19 && age < 31) {
+
+                    resolve(`congratualition`);
+
+                } else {
+                    reject('error occured');
+                }
+            });
+
+            mypromise.then(function (response) {
+
+                alert("Congratulation")
+                console.log(response);
+                setTimeout(function () {
+                    document.getElementById("congrts").src = h[0]
+
+
+                }, 10000)
+            });
+
+            mypromise.catch(function (err) {
+                    console.log(err)
+                    setTimeout(function () {
+                    document.getElementById("congrts").src = h[1]
+
+
+                }, 10000)
+            });
+
+        }
+        
+        function anant() {
+            var mypromise = new Promise(function (resolve, reject) {
+
+                var age = 18;
+
+                if (age > 19 && age < 31) {
+
+                    resolve(`congratualition`);
+
+                } else {
+                    reject('error occured');
+                }
+            });
+
+            mypromise.then(function (response) {
+
+                alert("Congratulation")
+                console.log(response);
+                setTimeout(function () {
+                    document.getElementById("congrts").src = h[0]
+
+
+                }, 10000)
+            });
+
+            mypromise.catch(function (err) {
+                    console.log(err)
+                    setTimeout(function () {
+                    document.getElementById("congrts").src = h[1]
+
+
+                }, 10000)
+            });
+
+        }
+        
+        function nrupul() {
+            var mypromise = new Promise(function (resolve, reject) {
+
+                var age = 26;
+
+                if (age > 19 && age < 31) {
+
+                    resolve(`congratualition`);
+
+                } else {
+                    reject('error occured');
+                }
+            });
+
+            mypromise.then(function (response) {
+
+                alert("Congratulation")
+                console.log(response);
+                setTimeout(function () {
+                    document.getElementById("congrts").src = h[0]
+
+
+                }, 10000)
+            });
+
+            mypromise.catch(function (err) {
+                    console.log(err)
+                    setTimeout(function () {
+                    document.getElementById("congrts").src = h[1]
+
+
+                }, 10000)
+            });
+
+        }
+        
+        function yogesh() {
+            var mypromise = new Promise(function (resolve, reject) {
+
+                var age = 36;
+
+                if (age > 19 && age < 31) {
+
+                    resolve(`congratualition`);
+
+                } else {
+                    reject('error occured');
+                }
+            });
+
+            mypromise.then(function (response) {
+
+                alert("Congratulation")
+                console.log(response);
+                setTimeout(function () {
+                    document.getElementById("congrts").src = h[0]
+
+
+                }, 10000)
+            });
+
+            mypromise.catch(function (err) {
+                    console.log(err)
+                    setTimeout(function () {
+                    document.getElementById("congrts").src = h[1]
+
+
+                }, 10000)
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

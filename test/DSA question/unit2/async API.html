@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style type="text/css">
+
+    #div11 {
+        text-align: center;
+    }
+    #buttn {
+        padding: 10px;
+        width: 140px;
+        background-color: purple;
+        color: whitesmoke;
+        border: 1px solid red;
+    }
+    #buttn2 {
+        padding: 10px;
+        width: 130px;
+        background-color: black;
+        color: whitesmoke;
+        border: 1px solid yellow;
+
+    }
+ 
+
+    </style>
+
+</head>
+
+<body>
+
+
+<div id="div11">
+    <button onclick="gettodo()" id="buttn">GET TODOS</button>
+
+    <button onclick="getalbum()" id="buttn">GET ALBUMS</button>
+
+    <button onclick="getuser()" id="buttn">GET USERS</button>
+</div>
+
+    <br />
+    <br />
+<div id="div11">
+    <button onclick="showtodo()" id="buttn2">SHOW TODOS</button>
+    <button onclick="showalbum()" id="buttn2">SHOW ALBUMS</button>
+    <button onclick="showuser()" id="buttn2">SHOW USERS</button>
+</div>
+<br/>
+<br/>
+
+
+    <div id="todo">
+
+    </div>
+
+
+
+    <script>
+
+
+        function gettodo() {
+            async function gettodo1() {
+                var data = fetch('http://jsonplaceholder.typicode.com/todos');
+
+                var newdata = await data;
+
+                var anotherdata = await newdata.json();
+
+                localStorage.setItem("TO-DOS-DATA", JSON.stringify(anotherdata))
+
+                console.log(anotherdata)
+            }
+
+            gettodo1()
+
+        }
+
+
+
+        function getalbum() {
+            async function getalbum22() {
+                var data = fetch('http://jsonplaceholder.typicode.com/albums');
+
+                var newdata = await data;
+
+                var anotherdata = await newdata.json();
+
+                localStorage.setItem("TO-ALBUM-DATA", JSON.stringify( anotherdata))
+
+                console.log(anotherdata)
+            }
+
+
+            getalbum22()
+        }
+
+
+
+
+        function getuser() {
+            async function getuser2() {
+                var data = fetch('http://jsonplaceholder.typicode.com/users');
+
+                var newdata = await data;
+
+                var anotherdata = await newdata.json();
+
+                localStorage.setItem("TO-PHOTOS-DATA", JSON.stringify(anotherdata))
+
+                console.log(anotherdata)
+            }
+            getuser2()
+
+        }
+
+        function showtodo() {
+            async function gettodo99() {
+
+                var nil = (localStorage.getItem("TO-DOS-DATA"))
+
+                document.getElementById("todo").innerHTML = nil
+
+                console.log(nil)
+            }
+
+            gettodo99()
+
+        }
+
+        
+        function showalbum() {
+            async function gettodo98() {
+
+                var nil1 = (localStorage.getItem("TO-ALBUM-DATA"))
+
+                document.getElementById("todo").innerHTML = nil1
+
+                console.log(nil1)
+            }
+
+            gettodo98()
+
+        }
+
+
+        
+        function showuser() {
+            async function gettodo97() {
+
+                var nil2 = (localStorage.getItem("TO-PHOTOS-DATA"))
+
+                document.getElementById("todo").innerHTML = nil2
+
+                console.log(nil2)
+            }
+
+            gettodo97()
+
+        }
+
+        window.localStorage.clear();
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+
+    #nilo {
+        margin-left: 30%;
+    }
+    #nilo22 {
+        margin-left: 45%;
+        padding: 10px;
+        background-color: royalblue;
+        color: seashell;
+    }
+      
+    </style>
+</head>
+
+<body>
+    <h1 id="nilo">Change the buttons text color random value</h1>
+    <button onclick="changecolour()" id="nilo22">Click here to change my color</button>
+    <script>
+
+
+        function changecolour() {
+
+
+            var colors = ['red', 'blue', 'green','yellow','black','purpule'];
+            var random_color = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById('nilo').style.color = random_color;
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

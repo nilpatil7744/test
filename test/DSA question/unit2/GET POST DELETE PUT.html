@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+
+    <button onclick="nil()">submit</button>
+
+    <div id="nil1">
+
+        <b />
+        <br />
+
+
+
+    </div>
+
+    <input type="text" id="input_nil">
+
+    <button onclick="getdata()">Get Data</button>
+
+    <div id="form">
+
+    </div>
+
+    <br />
+    <br />
+
+    <button onclick="postreq()">Post Request</button>
+    <br />
+    <br />
+
+    <button onclick="Putreq()">PUT Request</button>
+
+    <br />
+    <br />
+
+    <button onclick="Deletereq()">Delete Request</button>
+
+
+    <script>
+        function nil() {
+
+            var xhr = new XMLHttpRequest(); // step1  interact with server
+
+            xhr.open('GET', 'https://reqres.in/api/users?page=2');  // step 2
+
+            xhr.send(); // step3
+
+            xhr.onload = function () {                // step 4
+                console.log(xhr.response);
+
+                var recived = xhr.response
+
+                recived = JSON.parse(recived);
+                console.log(recived)
+
+                document.getElementById("nil1").innerHTML = recived
+
+                var arra = recived.data;
+
+
+                for (var i = 0; i < arra.length; i++) {
+
+                    var divv = document.getElementById("nil1")
+
+                    var p = document.createElement("P")
+
+                    divv.append(p)
+
+                    p.innerHTML = arra[i].first_name + " " + arra[i].email;
+                }
+
+            };
+        }
+
+
+
+        function getdata() {
+            var xhr = new XMLHttpRequest();
+
+
+            var value = document.getElementById("input_nil").value
+
+
+            var url = ' https://reqres.in/api/users/' + value;
+
+
+            xhr.open('GET', url)
+
+            xhr.send()
+
+            xhr.onload = function () {
+                var recived = xhr.response;
+
+                recived = JSON.parse(recived)
+
+                var newdiv = document.getElementById("form")
+                var p = document.createElement("p")
+
+                newdiv.append(p)
+
+                p.innerHTML = recived.data.email + " " + recived.data.first_name
+
+
+            }
+
+        }
+
+////posted a request 
+
+        function postreq() {
+
+            var xhr = new XMLHttpRequest();
+
+
+            xhr.open('POST', ' https://reqres.in/api/users');
+
+            var body = {
+                name: 'Nilesh',
+                job: 'masai student',
+            }
+
+            body = JSON.stringify(body);
+
+            xhr.setRequestHeader('content-type','application/json;charset=utf8');
+
+            xhr.send(body);
+
+
+         
+
+            xhr.onload = function () {
+
+                console.log(xhr.response);
+
+            }
+
+        }
+        function Putreq(){
+            
+            var xhr = new XMLHttpRequest();
+
+
+            xhr.open('PUT', ' https://reqres.in/api/users');
+
+            var body = {
+                name: 'Nilesh',
+                job: 'masai Future Team member',
+            }
+
+            body = JSON.stringify(body);
+
+            xhr.setRequestHeader('content-type','application/json;charset=utf8');
+
+            xhr.send(body);
+
+
+         
+
+            xhr.onload = function () {
+
+                console.log(xhr.response);
+            }
+
+        }
+
+        //// delete data
+
+        function Deletereq() {
+
+            var xhr  = new XMLHttpRequest();
+
+            xhr.open('DELETE','https://reqres.in/api/users?page=2');
+
+            xhr.send();
+
+            xhr.onload = function() {
+                console.log(xhr.status);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+

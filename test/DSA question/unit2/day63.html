@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+
+    #bobo {
+        margin-left: 38%;
+        margin-top: 20px;
+    }
+    #mom2 {
+        margin-left: 49px;
+        margin-top: 20px;
+        padding: 10px;
+        
+    }
+    #mom3 {
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+    #mom5 {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    #mom1 {
+        margin-left: 40px;
+        padding: 10px;
+    }
+    #mom4 {
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+    #mom6 {
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+    #mom7 {
+        margin-top: 20px;
+        margin-left: 30px;
+        padding: 10px;
+    }
+
+
+    #btn22 {
+        margin-left: 44%;
+        padding: 10px;
+        color: blue;
+        margin-top: 20px;
+        width: 100px;
+    }
+    #nilo23 {
+        margin-left: 40%;
+
+    }
+    #nilo24 {
+        margin-left: 40%;
+        
+    }
+    #nilo25 {
+        margin-left: 40%;
+        
+    }
+    #nilo26 {
+        margin-left: 40%;
+        
+    }
+    #nilo27 {
+        margin-left: 40%;
+        
+    }
+    #nilo28 {
+        margin-left: 40%;
+        
+    }
+    #nilo29 {
+        margin-left: 40%;
+        
+    }
+    #nilo00 {
+        margin-left: 40%;
+        color: red;
+        
+    }
+    #label11 {
+        color: red; 
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    
+    
+    
+    
+    </style>
+
+</head>
+
+<body>
+
+    <form id="bobo">
+        <label id="label11">Name :</label>
+        <input type="text" id="mom1">
+        <br />
+        <label id="label11">Age :</label>
+        <input type="number" id="mom2">
+        <br />
+        <label id="label11">Gender :</label>
+        <input type="text" id="mom3">
+        <br />
+        <label id="label11">Football :</label>
+        <input type="text" id="mom4">
+        <br />
+        <label id="label11">Basketball :</label>
+        <input type="text" id="mom5">
+        <br />
+        <label id="label11">kabaddi :</label>
+        <input type="text" id="mom6">
+        <br />
+        <label id="label11">cricket :</label>
+        <input type="text" id="mom7">
+        <br />
+    </form>
+
+
+
+
+    <button onclick="submit()" id="btn22">SUBMIT</button>
+
+
+    <h3 id="nilo23"></h3>
+    <h3 id="nilo24"></h3>
+    <h3 id="nilo25"></h3>
+    <h3 id="nilo26"></h3>
+    <h3 id="nilo27"></h3>
+    <h3 id="nilo28"></h3>
+    <h3 id="nilo29"></h3>
+  
+
+
+
+
+
+
+    <script>
+
+
+        function submit22() {
+
+            alert ("Sorry Your Form Not Submited!!!!")
+
+            var name1 = document.getElementById("mom1").value
+            var age1 = document.getElementById("mom2").value
+            var gender1 = document.getElementById("mom3").value
+            var football1 = document.getElementById("mom4").value
+            var  basketball1= document.getElementById("mom5").value
+            var kabaddi1 = document.getElementById("mom6").value    
+            var cricket1 = document.getElementById("mom7").value
+            localStorage.setItem("NAME2",name1)
+            localStorage.setItem("AGEEE",age1)
+            localStorage.setItem("GENDER3",gender1)
+            localStorage.setItem("football",football1)
+            localStorage.setItem("basketball",basketball1)
+            localStorage.setItem("kabaddi",kabaddi1)
+            localStorage.setItem("cricket",cricket1)
+           
+
+            
+          clearInterval(m)
+
+        }
+
+          var m = setInterval(submit22,15000)
+
+             
+            function submit() {           
+               alert("*** [ Congratulation Form Submited ]  ***")
+
+                
+            var name1 = document.getElementById("mom1").value
+            var age1 = document.getElementById("mom2").value
+            var gender1 = document.getElementById("mom3").value
+            var football1 = document.getElementById("mom4").value
+            var  basketball1= document.getElementById("mom5").value
+            var kabaddi1 = document.getElementById("mom6").value    
+            var cricket1 = document.getElementById("mom7").value
+       
+
+                
+            document.getElementById("nilo23").textContent = name1
+            
+            document.getElementById("nilo24").textContent = age1
+            
+            document.getElementById("nilo25").textContent = gender1
+
+            document.getElementById("nilo26").textContent = football1
+            
+            document.getElementById("nilo27").textContent = basketball1
+            
+            document.getElementById("nilo28").textContent = kabaddi1
+                 
+            document.getElementById("nilo29").textContent = cricket1
+
+                clearInterval(m)
+            }
+        
+
+    </script>
+
+</body>
+
+</html>

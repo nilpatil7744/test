@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+    <select id="selcted">
+        <option>inception</option>
+        <option>Bahubali</option>
+        <option>THE Great Gatsby</option>
+        <option>dhamaal</option>
+        <option>kuch kuch hota hai</option>
+        <option>Ranjhana</option>
+        <option>Peaky Blinders</option>
+        <option>James Bond 007</option>
+        <option>shinchan movie</option>
+        <option>Naruto</option>
+
+    </select>
+    <input min="0" max="5" type="number" id="number1">
+    <input type="text" id="feedback">
+
+
+    <input type="checkbox" id="nilo10" name="interest" value="Will rewatch" >
+    <label id="nilo">Will rewatch</label>
+    <br>
+    <input type="checkbox" id="nilo11" name="interest1" value="Will not rewatch">
+    <label id="nilo1">Will not rewatch</label>
+
+
+    <br />
+
+
+
+
+
+    <button onclick="start()">SUBMIT</button>
+    <br />
+
+    <table>
+        <thead>
+            <th id="thead1">
+
+            </th>
+        </thead>
+    </table>
+
+
+    <script>
+
+
+
+
+
+        function start() {
+
+            var selectoption = document.querySelector("select").value;
+            var numbers2 = document.getElementById("number1").value;
+            var feedback1 = document.getElementById("feedback").value;
+            var input22 = document.getElementById("nilo10").value;
+            var input23 = document.getElementById("nilo11").value;
+
+            var theadd = document.getElementById("thead1")
+            var td0 = document.createElement("td")
+            var td1 = document.createElement("td")
+            var td2 = document.createElement("td")
+            var td3 = document.createElement("td")
+            var td4 = document.createElement("td")
+
+
+            theadd.appendChild(td0)
+            theadd.appendChild(td1)
+            theadd.appendChild(td2)
+            theadd.appendChild(td3)
+            theadd.appendChild(td4)
+
+            td0.textContent = selectoption;
+            td1.textContent = numbers2;
+            td2.textContent = feedback1;
+
+
+
+            if(document.getElementById("nilo10").checked){
+                
+            td3.textContent = input22;
+
+            }else if (document.getElementById("nilo11").checked){
+                     
+            td3.textContent = input23;
+
+            }
+             
+            
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

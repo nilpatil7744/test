@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+
+        #const {
+            display: none;
+            grid-template-columns: repeat(5,100px);
+            grid-template-rows: repeat(5,100px);
+        }
+
+
+
+        </style>
+    </head>
+    <body>
+
+
+        <form>
+            <input type="text" id="name">
+
+            <br/>
+            <br/>
+
+            <input type="text" id="age">
+            <br/>
+            <br/>
+
+            <input type="text" id="science">
+            <br/>
+            <br/>
+
+            <input type="text" id="english">
+            <br/>
+            <br/>
+
+            <input type="text" id="math" >
+        </form>
+
+        <br/>
+
+        <button onclick="submit()" >Submit</button>
+
+
+        <div id="const">
+           
+        </div>
+
+        <p id="mess"></p>
+
+       
+
+
+
+        <script>
+
+            function submit() {
+
+            var naame = document.getElementById("name");
+            var age = document.getElementById("age");
+            var science = document.getElementById("science");
+            var eng = document.getElementById("english");
+            var mathee = document.getElementById("math");
+
+            var element = document.createElement('div')
+            element.innerHTML = naame;
+
+            }
+          
+        </script>
+
+
+
+
+
+    </body>
+</html>

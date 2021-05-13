@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Create multiple constructor functions to add new teachers, new students and new competitions.
+
+
+        function Teacher(teacher) {
+            this.teacher = teacher;
+     
+           
+        }
+        
+        function STUDENT(students) {
+          
+            this.students = students;
+           
+
+        }
+        
+        function Competition(students,competition) {
+            this.students = students
+            this.competition = competition;
+           
+           
+
+        }
+
+
+        
+        var addnew2 = new Teacher("nilesh");
+        var addnew3 = new STUDENT("yogesh");
+        var addnew4 = new Competition("yogesh","BYJU'S National Aptitude Test");
+
+
+        Object.prototype.nil = function () {
+            console.log(this.teacher)
+        }
+
+        Object.prototype.nil2 = function () {
+            console.log(this.students)
+        }
+        Object.prototype.nil3 = function () {
+            console.log(this.students,this.competition)
+        }
+
+        addnew2.nil();
+        addnew3.nil2();
+        addnew4.nil3();
+    
+
+
+
+        
+
+
+        // School2.prototype.niil = function () {
+
+        //     console.log(this.teacher,this.students)
+
+        // }
+
+        // School2.prototype.niil2 = function () {
+
+        //     console.log(this.teacher,this.students)
+
+        // }
+
+        // School2.prototype.niil3 = function () {
+
+        //     console.log(this.teacher,this.students)
+
+        // }
+
+        // School2.prototype.niil = function () {
+        //     console.log(this.compitator)
+        // }
+
+
+
+        // addnew2.niil();
+        // addnew3.niil2();
+        // addnew4.niil3();
+
+
+        // addnew2.compitator();
+        // addnew3.compitator();
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

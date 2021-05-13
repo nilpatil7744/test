@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+
+    #nil1 {
+        margin-left: 150px;
+        text-align: center;
+    }
+    #buttn1{
+
+        margin-left: 700px;
+        padding: 10px;
+        width: 100px;
+        color: darkblue;
+        margin-top: 20px;
+
+    }
+    #buttn2{
+        padding: 10px;
+        width: 100px;
+        color: darkblue;
+        margin-top: 20px;
+
+
+}
+
+   
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="nil1">
+
+        <img src="" id="images11" >
+
+
+
+
+    </div>
+
+
+
+
+    <button onclick="startt()" id="buttn1">Start</button>
+    <button onclick="stop1()" id="buttn2">Stop</button>
+
+    <script>
+
+        var h = ["https://wi.wallpapertip.com/wsimgs/148-1482720_rick-and-morty-breaking-bad.jpg", "https://c4.wallpaperflare.com/wallpaper/971/219/607/movie-attack-on-titan-shingeki-no-kyojin-hd-wallpaper-preview.jpg", "https://img.vxdn.net/c-max/1200/peaky-blinders-season-1-4224.jpg"," https://media.comicbook.com/2020/04/one-piece-wano-straw-hats-anime-1178092-1216282.jpeg?auto=webp&width=1200&height=672&crop=1200:672,smart","https://www.hdwallpaper.nu/wp-content/uploads/2017/09/suits-2-660x330.jpg"]
+
+
+
+
+        var i = 0;
+
+        function nilop() {
+           
+
+            document.getElementById("images11").src = h[i];
+
+            if(i < (h.length-1) ){
+                i++;
+              
+          
+            }
+            else {
+                i = 0;
+            }
+    
+        }
+
+      
+        var seet
+   
+        function startt(){
+
+            seet = setInterval(nilop,3000)
+
+         
+        }
+        function stop1(){
+                clearInterval(seet)
+        }
+
+
+    </script>
+
+</body>
+
+</html>

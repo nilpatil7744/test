@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+
+    .shape {
+
+        padding: 20px;
+        margin-left: 44%;
+        margin-top: 30px;
+
+    }
+    .sizee {
+        padding: 10px;
+        margin-left: 47%;
+        margin-top: 15px;
+        width: 100px;
+    }
+    .arrange {
+        margin-top: 40px;
+        margin-left: 44%;
+        font-size: 20px;
+        
+    }
+
+
+    
+    
+    
+    
+    </style>
+
+</head>
+
+<body>
+
+
+    <input type="text" id="name22" class="shape">
+    <br/>
+
+
+    <button onclick="add()" class="sizee">ADD</button>
+
+    <ul id="addtext" class="arrange">The list is empty</ul>
+
+
+
+    <script>
+
+
+        var d = [];
+
+        function add() {
+
+
+
+            var namee = document.getElementById("name22").value
+
+            
+
+            console.log(namee)
+            // document.getElementById("addtext").innerHTML = namee;
+
+
+
+            var ul = document.getElementById("addtext")
+
+            var li = document.createElement("li")
+
+
+            ul.append(li)
+
+      
+
+
+            li.innerHTML = namee
+
+            d.push((li.innerHTML))
+
+            localStorage.setItem("name", d)
+            console.log(typeof(d))
+
+
+
+
+        }
+        localStorage.clear();
+       
+     
+
+       
+
+    </script>
+
+</body>
+
+</html>

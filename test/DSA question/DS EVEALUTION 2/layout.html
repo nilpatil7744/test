@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+
+        .flex {
+            display: flex;
+        }
+
+        .flex > div {
+            height: 100px;
+            margin: 10px;
+            gap: 10px;
+            width: 300px;
+            flex-basis: 300px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        #box1 {
+            background-color: white;
+        }
+        #top h2 {
+            margin-left: 90px;
+            margin-top: -70px;
+        }
+        #top img {
+            height: 50px;
+            width: 50px;
+            border: 0.5px solid red;
+           margin: 20px;
+           border-radius: 50px;
+
+        }
+        #top p {
+            margin-left: 90px;
+            margin-top: -15px;
+        }
+        #box2 {
+            background-color: yellow;
+        }
+        #box3 {
+            background-color: blue;
+        }
+        #box4 {
+            background-color: skyblue;
+        }
+        .clear {
+            clear: both;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 35px;
+        }
+        .clear {
+            clear: both;
+        }
+
+
+        .flexp {
+            display: flex;
+        }
+
+        .flexp > div {
+            width: 20px;
+            height: 20px;
+            padding: 10px;
+            flex-basis: 200px;
+            border-radius: 5px;
+          
+        }
+        .col1 {
+            background-color: white;
+        }
+        .col2 {
+            border: 0.5px solid black;
+            text-align: center;
+            background-color: skyblue;
+            
+        }
+        .clear {
+            clear: both;
+        }
+
+        #colo {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+
+            background-color: slategrey;
+            
+            grid-template: "a b c";
+            background-color: white;
+        }
+        #colo1 {
+            grid-area: a;
+            height: 550px;
+            width: 250px;
+            margin: 60px;
+            border: 1px solid red;
+            margin-right: 30px;
+        }
+        #colo2 {
+            grid-area: b;
+            height: 550px;
+            width: 250px;
+            margin: 60px;
+            border: 1px solid red;
+            margin-left: 20px;
+        }
+        #colo3 {
+            grid-area: c;
+            height: 550px;
+            width: 250px;
+            margin: 60px;
+            border: 1px solid red;
+            margin-left: 20px;
+        }
+
+        #colo img {
+            width: 250px;
+            height: 180px;
+        }
+
+        #colo p {
+            text-align: center;
+        }
+        #colo h3 {
+            text-align: center;
+        }
+
+       
+
+        </style>
+
+
+    </head>
+    <body>
+
+
+        <div id="top" class="flex">
+            <div id="box1"></div>
+            <div id="box2"><img src="  https://placeholder.com/  "><h2>Scholarship</h2><p>Available</p></div>
+            <div id="box3">  <img src="  https://placeholder.com/  "><h2>Scholarship</h2><p>Available</p> </div> 
+            <div id="box4">  <img src="  https://placeholder.com/  "><h2>Scholarship</h2><p>Available</p></div>
+        </div>
+
+        <div class="clear"></div>
+
+
+        <h1 id="bottom">Popular Programmer</h1>
+
+        <br/>
+
+
+        <div id="right" class="flexp">
+
+            <div class="col1"></div>
+            <div class="col1"></div>
+            <div class="col2">Graduate</div>
+            <div class="col2">Postgraduate</div>
+            <div class="col2">PHD Scholarship</div>
+            <div class="col2">Training</div>
+            <div class="col1"></div>
+
+        </div>
+        <div class="clear"></div>
+        <br/>
+
+
+
+
+        <div id="colo">
+
+            
+            <div id="colo1"> <img src="  https://placeholder.com/  "><p>Agriculture</p> <h3>Chemical engineer</h3></div>
+            <div id="colo2"> <img src="  https://placeholder.com/  "><p>Agriculture</p> <h3>Mechanical engineer</h3> </div>
+            <div id="colo3"> <img src="  https://placeholder.com/  "><p>Agriculture</p><h3>Bio Engineer</h3> </div>
+
+
+        </div>
+
+
+
+
+    </body>
+</html>

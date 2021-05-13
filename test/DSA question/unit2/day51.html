@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+
+
+    <h1 id="nil1"> The counter is null</h1>
+
+
+    <button onclick="increase()">INCREASE</button>
+    <button onclick="deacrease()">DEACREASE</button>
+
+
+
+
+
+    <script>
+
+   
+
+
+        function increase() {
+            var count = 0;
+
+            document.getElementById("nil1").textContent = count++;
+
+            console.log(count)
+
+      
+
+            localStorage.setItem('numbern',count)
+
+           
+
+
+        }
+
+
+        function deacrease() {
+            var count = -1;
+
+            document.getElementById("nil1").textContent = count--;
+            console.log(count)
+
+     
+
+            localStorage.setItem('numbern',count)
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

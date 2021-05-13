@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Add a new method to the Shape class's prototype, calcPerimeter(), which calculates its perimeter 
+        //     (the length of the shape's outer edge) and logs the result to the console.
+
+        function Shape(name, sides, sideLength) {
+            this.name = name;
+            this.sides = sides;
+            this.sideLength = sideLength;
+        }
+
+
+
+        Shape.prototype.calperimeter = function () {
+
+            console.log((this.sides - 2) * this.sideLength * 2)
+        }
+
+
+
+        var new11 = new Shape("NIlesh", 4, 5);
+
+        console.log(new11)
+
+        new11.calperimeter();
+
+
+        // Create a new instance of the Shape class called square. Give it a name of square and a sideLength of 5.
+
+        Shape.prototype.square22 = function () {
+
+            console.log(this.sideLength * this.sideLength);
+        }
+
+        var square = new Shape("square", 4, 5);
+
+
+        console.log(square)
+
+
+        square.square22();
+
+
+        // Call your calcPerimeter() method on the instance, to see whether
+        // it logs the calculation result to the browser DevTools' console as expected.
+
+
+        new11.calperimeter();
+
+        // Create a new instance of Shape called triangle, with a name of triangle and a sideLength of 3.
+
+
+        var triangle = new Shape("triangle",4,3)
+
+        console.log(triangle);
+
+        triangle.calperimeter();
+
+
+    </script>
+</body>
+
+</html>

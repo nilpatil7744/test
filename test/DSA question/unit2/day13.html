@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+    <input id="nil1" type="text">
+    <input id="nil2" type="text">
+    <br />
+
+    <button onclick="lol()">SuBmit</button>
+
+    <p id="trueval"></p>
+
+
+
+
+
+    <script>
+
+
+
+
+
+        function lol() {
+
+
+
+
+            var a = document.getElementById("nil1").value
+            var b = document.getElementById("nil2").value
+
+            var p = document.getElementById("trueval")
+
+            console.log(a, b)
+            if (a.includes(b)) {
+                p.innerHTML = "true"
+            } else {
+                p.innerHTML = "false"
+            }
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
